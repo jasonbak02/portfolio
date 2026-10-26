@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photos — Jason Bak</title>
+  <meta name="description" content="Photography by Jason Bak: stage performances and people.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__mark" href="index.html" aria-label="Jason Bak, home">JB</a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="photos.html" aria-current="page">Photos</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="photos">
+    <header class="photos__head">
+      <h1 class="photos__title">Photo<em>graphs</em></h1>
+      <div class="photos__intro">
+        <p>Mostly stage light and people. Shot on Canon EOS R, R5 and Sony ZV-E10.</p>
+        <div class="photos__filters" role="group" aria-label="Filter photos">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All <span>06</span></button>
+          <button type="button" class="chip" data-filter="stage" aria-pressed="false">Stage <span>04</span></button>
+          <button type="button" class="chip" data-filter="people" aria-pressed="false">People <span>02</span></button>
+        </div>
+      </div>
+    </header>
+
+    <!--
+      To add a photo: copy one <figure>, point src/srcset at a small (~1000px)
+      and large (~2400px) copy in assets/photos, set data-cat, and fill in the caption.
+      The "ph--*" class picks its spot in the editorial layout.
+    -->
+    <div class="gallery" id="gallery">
+      <figure class="ph ph--full" data-cat="stage">
+        <button class="ph__open" type="button" aria-label="Open photo 01 full screen">
+          <img src="assets/photos/dsc08208-sm.jpg" srcset="assets/photos/dsc08208-sm.jpg 1000w, assets/photos/dsc08208.jpg 2400w"
+               sizes="(max-width: 760px) 100vw, 1250px" width="2400" height="1600" loading="eager"
+               alt="Dancers mid-routine under saturated red stage light">
+        </button>
+        <figcaption><span class="ph__no">01</span><span class="ph__cat">Stage</span><span class="ph__exif">28mm · f/5.6 · 1/200 · ISO 6400</span></figcaption>
+      </figure>
+
+      <figure class="ph ph--tall" data-cat="people">
+        <button class="ph__open" type="button" aria-label="Open photo 02 full screen">
+          <img src="assets/photos/3x6a8680-sm.jpg" srcset="assets/photos/3x6a8680-sm.jpg 667w, assets/photos/3x6a8680.jpg 1600w"
+               sizes="(max-width: 760px) 100vw, 520px" width="1600" height="2400" loading="lazy"
+               alt="Candid of a woman in a pink dress turning toward the camera among friends by a window">
+        </button>
+        <figcaption><span class="ph__no">02</span><span class="ph__cat">People</span><span class="ph__exif">98mm · f/4 · 1/200 · ISO 800</span></figcaption>
+      </figure>
+
+      <figure class="ph ph--wide-r" data-cat="stage">
+        <button class="ph__open" type="button" aria-label="Open photo 03 full screen">
+          <img src="assets/photos/dsc07623-sm.jpg" srcset="assets/photos/dsc07623-sm.jpg 1000w, assets/photos/dsc07623.jpg 2400w"
+               sizes="(max-width: 760px) 100vw, 740px" width="2400" height="1600" loading="lazy"
+               alt="Three dancers in white caught in a single spotlight on a black stage">
+        </button>
+        <figcaption><span class="ph__no">03</span><span class="ph__cat">Stage</span><span class="ph__exif">50mm · f/5.6 · 1/250 · ISO 6400</span></figcaption>
+      </figure>
+
+      <figure class="ph ph--offset" data-cat="stage">
+        <button class="ph__open" type="button" aria-label="Open photo 04 full screen">
+          <img src="assets/photos/dsc07697-sm.jpg" srcset="assets/photos/dsc07697-sm.jpg 1000w, assets/photos/dsc07697.jpg 2400w"
+               sizes="(max-width: 760px) 100vw, 1040px" width="2400" height="1600" loading="lazy"
+               alt="A group of dancers with arms crossed, lit deep blue against darkness">
+        </button>
+        <figcaption><span class="ph__no">04</span><span class="ph__cat">Stage</span><span class="ph__exif">50mm · f/5.6 · 1/250 · ISO 6400</span></figcaption>
+      </figure>
+
+      <figure class="ph ph--left" data-cat="stage">
+        <button class="ph__open" type="button" aria-label="Open photo 05 full screen">
+          <img src="assets/photos/5c9a0468-sm.jpg" srcset="assets/photos/5c9a0468-sm.jpg 1000w, assets/photos/5c9a0468.jpg 2400w"
+               sizes="(max-width: 760px) 100vw, 830px" width="2400" height="1600" loading="lazy"
+               alt="A line of seven dancers in white moving across a dark stage">
+        </button>
+        <figcaption><span class="ph__no">05</span><span class="ph__cat">Stage</span><span class="ph__exif">105mm · f/4 · 1/125 · ISO 160</span></figcaption>
+      </figure>
+
+      <figure class="ph ph--full" data-cat="people">
+        <button class="ph__open" type="button" aria-label="Open photo 06 full screen">
+          <img src="assets/photos/3x6a8893-sm.jpg" srcset="assets/photos/3x6a8893-sm.jpg 1000w, assets/photos/3x6a8893.jpg 2400w"
+               sizes="(max-width: 760px) 100vw, 1250px" width="2400" height="1600" loading="lazy"
+               alt="Four graduates in red stoles sitting on a bench in late golden-hour light">
+        </button>
+        <figcaption><span class="ph__no">06</span><span class="ph__cat">People</span><span class="ph__exif">56mm · f/4 · 1/500 · ISO 200</span></figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <img class="lightbox__img" id="lbImg" alt="">
+    <div class="lightbox__bar">
+      <span class="lightbox__count" id="lbCount">01 / 06</span>
+      <span class="lightbox__exif" id="lbExif"></span>
+    </div>
+    <button class="lightbox__btn lightbox__close" id="lbClose" type="button" aria-label="Close">×</button>
+    <button class="lightbox__btn lightbox__prev" id="lbPrev" type="button" aria-label="Previous photo">←</button>
+    <button class="lightbox__btn lightbox__next" id="lbNext" type="button" aria-label="Next photo">→</button>
+  </dialog>
+
+  <footer class="photos__foot">
+    <a href="index.html">← Back to home</a>
+    <span>© 2026 Jason Bak</span>
+  </footer>
+
+  <script src="photos.js?v=7"></script>
+</body>
+</html>

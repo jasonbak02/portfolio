@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason Bak — Mechanical Engineer</title>
+  <meta name="description" content="Jason Bak is a mechanical engineer at the U.S. Department of Health and Human Services, based between New York and Arizona.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="nav nav--clear">
+    <a class="nav__mark" href="#top" aria-label="Jason Bak, home">JB</a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO ---------------------------------------------------------- -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <!-- Pinned while the taller section scrolls past; script.js drives the parting name. -->
+      <div class="hero__stage">
+        <figure class="hero__media">
+          <video id="heroVideo" src="assets/hero.mp4" autoplay muted loop playsinline preload="auto"></video>
+        </figure>
+
+        <div class="hero__frame">
+          <div class="hero__meta">
+            <p class="hero__role">Mechanical engineer, U.S. Department of Health and Human Services</p>
+            <p class="hero__place">New York &amp; Arizona</p>
+          </div>
+
+          <div>
+            <h1 class="hero__name">
+              <span class="hero__line">Jason</span>
+              <span class="hero__line">Bak</span>
+            </h1>
+            <div class="hero__foot">
+              <p class="hero__caption"><span>Fig. 01</span> Reel, 2026</p>
+              <button class="hero__toggle" id="heroToggle" type="button" aria-label="Pause background video">
+                <span class="hero__toggle-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK ---------------------------------------------------------- -->
+    <section class="section" id="work">
+      <header class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title">Selected work</h2>
+      </header>
+
+      <ol class="work">
+        <li class="work__item work__item--feature">
+          <span class="work__year">2026</span>
+          <div>
+            <h3 class="work__name">Endurance Glider: Designing for Time Aloft</h3>
+            <p class="work__desc">Our MAE 3050 team is designing a spring-launched glider built to stay in the air as long as possible, using only kit balsa, spruce and tissue. I modeled the full aircraft and launcher in Fusion, built the 1&nbsp;m SD7003 wing from 23 laser-cut ribs, and sized every part around the competition’s material and launch rules.</p>
+          </div>
+          <span class="work__tags">Fusion · Aero · MAE 3050</span>
+
+          <!-- Placeholder until the model and build photos are ready. -->
+          <figure class="cad glider" aria-labelledby="gliderCap">
+            <div class="glider__stage">
+              <div class="cad__readout">
+                <span class="cad__sys">In progress · MAE 3050</span>
+                <span class="glider__soon">Coming soon</span>
+              </div>
+              <svg class="glider__dwg" viewBox="0 0 960 480" role="img" aria-label="Plan-view sketch of the glider: a one-metre wing with 23 ribs, a spruce fuselage stick and a tailplane, with an SD7003 airfoil section">
+                <line class="glider__cl" x1="480" y1="40" x2="480" y2="440"/>
+
+                <!-- span dimension -->
+                <path class="thin" d="M180 125 V62 M780 125 V62"/>
+                <path d="M180 70 H780 M185 75 l-10 -10 M785 75 l-10 -10"/>
+                <text class="glider__dim" x="480" y="62" text-anchor="middle">SPAN 1000 MM</text>
+
+                <!-- wing outline + 23 ribs -->
+                <path d="M180 142 L300 130 H660 L780 142 V200 L660 210 H300 L180 200 Z"/>
+                <path class="thin" d="M180.0 142.0 V200.0 M207.3 139.3 V202.3 M234.5 136.5 V204.5 M261.8 133.8 V206.8 M289.1 131.1 V209.1 M316.4 130.0 V210.0 M343.6 130.0 V210.0 M370.9 130.0 V210.0 M398.2 130.0 V210.0 M425.5 130.0 V210.0 M452.7 130.0 V210.0 M480.0 130.0 V210.0 M507.3 130.0 V210.0 M534.5 130.0 V210.0 M561.8 130.0 V210.0 M589.1 130.0 V210.0 M616.4 130.0 V210.0 M643.6 130.0 V210.0 M670.9 131.1 V209.1 M698.2 133.8 V206.8 M725.5 136.5 V204.5 M752.7 139.3 V202.3 M780.0 142.0 V200.0"/>
+                <path class="thin" d="M180 156 L300 148 H660 L780 156"/>
+
+                <!-- fuselage stick, nose block, tailplane, fin -->
+                <path d="M470 92 Q480 84 490 92 V122 H470 Z"/>
+                <rect x="476" y="122" width="8" height="290"/>
+                <path d="M400 372 H560 L552 400 H408 Z"/>
+                <path class="thin" d="M406 392 H554"/>
+                <path class="glider__fin" d="M480 356 V420"/>
+
+                <!-- SD7003 section (schematic) -->
+                <path d="M248 432 C200 420 120 404 66 410 C50 412 42 418 44 424 C48 430 70 433 110 432 C170 431 220 432 248 432 Z"/>
+                <path class="thin" d="M44 424 H248"/>
+                <text class="glider__note" x="44" y="458">SD7003 SECTION · NTS</text>
+
+                <!-- callouts -->
+                <g class="glider__notes">
+                  <path class="thin" d="M698 140 L760 104 H800"/>
+                  <text class="glider__note" x="806" y="108">23 LASER-CUT RIBS</text>
+                  <path class="thin" d="M742 196 L790 236 H800"/>
+                  <text class="glider__note" x="806" y="240">BALSA · TISSUE</text>
+                  <path class="thin" d="M484 300 H800"/>
+                  <text class="glider__note" x="806" y="304">SPRUCE FUSELAGE</text>
+                  <path class="thin" d="M556 386 L600 420 H800"/>
+                  <text class="glider__note" x="806" y="424">TAILPLANE</text>
+                </g>
+              </svg>
+            </div>
+            <figcaption class="edu__titleblock cad__titleblock" id="gliderCap">
+              <span><b>DWG.</b> 01</span>
+              <span><b>Subject</b> Endurance glider</span>
+              <span><b>Status</b> In progress</span>
+              <span><b>Software</b> Autodesk Fusion</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="work__item work__item--feature">
+          <span class="work__year">2026</span>
+          <div>
+            <h3 class="work__name">R262 Subway Car</h3>
+            <p class="work__desc">A full CAD model of an NYC Transit R262 subway car, built in Fusion: car body, interior, doors, couplers and both motor trucks, down to the brake shoes and third-rail contact shoes. 313 parts across seven assemblies.</p>
+          </div>
+          <span class="work__tags">Fusion · CAD · Rail</span>
+
+          <!-- Interactive model. r262.js loads three.js + the model only when this scrolls near. -->
+          <figure class="cad" id="r262" data-model="assets/models/r262.fbx">
+            <div class="cad__stage">
+              <div class="cad__readout" aria-live="polite">
+                <span class="cad__sys" id="cadSys">Hover a part</span>
+                <span class="cad__part" id="cadPart">—</span>
+              </div>
+              <div class="cad__zoom">
+                <button type="button" data-zoom="in" aria-label="Zoom in" disabled>+</button>
+                <button type="button" data-zoom="out" aria-label="Zoom out" disabled>−</button>
+              </div>
+              <div class="cad__loading">
+                <span id="cadLoadText">Loading model</span>
+                <span class="cad__bar"><span id="cadBar"></span></span>
+              </div>
+              <p class="cad__hint">Drag to orbit · Click, then scroll to zoom · Right-drag to pan</p>
+            </div>
+            <div class="cad__controls">
+              <div class="cad__group" role="group" aria-label="Camera view">
+                <span class="cad__label">View</span>
+                <button type="button" class="chip" data-view="iso" aria-pressed="true" disabled>3/4</button>
+                <button type="button" class="chip" data-view="side" aria-pressed="false" disabled>Side</button>
+                <button type="button" class="chip" data-view="front" aria-pressed="false" disabled>Front</button>
+                <button type="button" class="chip" data-view="top" aria-pressed="false" disabled>Top</button>
+              </div>
+              <div class="cad__group" role="group" aria-label="Display">
+                <span class="cad__label">Display</span>
+                <button type="button" class="chip" data-toggle="explode" aria-pressed="false" disabled>Exploded</button>
+                <button type="button" class="chip" data-toggle="interior" aria-pressed="false" title="Hide the car body to see inside" disabled>Interior</button>
+                <button type="button" class="chip" data-toggle="blueprint" aria-pressed="false" disabled>Blueprint</button>
+                <button type="button" class="chip" data-toggle="track" aria-pressed="true" disabled>Track</button>
+              </div>
+            </div>
+            <figcaption class="edu__titleblock cad__titleblock">
+              <span><b>DWG.</b> 02</span>
+              <span><b>Subject</b> R262 subway car</span>
+              <span><b>Parts</b> 313 · 7 assemblies</span>
+              <span><b>Software</b> Autodesk Fusion</span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="work__item">
+          <span class="work__year">2026</span>
+          <div>
+            <h3 class="work__name">Mole Lake Health Clinic Expansion</h3>
+            <p class="work__desc">A $21 million expansion that triples the Sokaogon Chippewa Community’s health clinic in Mole Lake, Wisconsin, from 10,000 to more than 30,000 square feet, making room for telehealth and expanded services.</p>
+            <ul class="site__list work__list">
+              <li>Reviewed contractor bid proposals and interviewed candidates for the construction contract.</li>
+              <li>Planned emergency egress routes and placed exit signs, evacuation maps and fire extinguishers.</li>
+              <li>Laid out furniture across the expanded clinic.</li>
+            </ul>
+            <a class="work__link" href="https://www.wjfw.com/news/local/mole-lake-health-clinic-triples-in-size-to-expand-services-to-meet-community-needs/article_ece88b73-f2a0-4716-87f7-f1e964275dec.html" target="_blank" rel="noopener">Read the WJFW story ↗</a>
+          </div>
+          <span class="work__tags">Life safety · Procurement</span>
+        </li>
+        <li class="work__item work__item--feature">
+          <span class="work__year">2025</span>
+          <div>
+            <h3 class="work__name">Havasupai Water Tower Rehabilitation</h3>
+            <p class="work__desc">Structural rehabilitation of a 50,000-gallon elevated water storage tank on the Havasupai Reservation, the potable water supply for more than 300 residents of the Havasupai Tribe. U.S. Public Health Service mechanical engineering internship, Parker, Arizona.</p>
+          </div>
+          <span class="work__tags">ANSYS · FEA · Structural</span>
+
+          <!-- The design files are government property, so the figure is the place, not the model. -->
+          <div class="site">
+            <figure class="site__fig">
+              <img src="assets/photos/havasu-falls.jpg" width="1600" height="1200" loading="lazy" decoding="async"
+                   alt="Havasu Falls dropping into a turquoise pool between red canyon walls on the Havasupai Reservation">
+              <figcaption class="edu__titleblock cad__titleblock">
+                <span><b>Fig.</b> 02</span>
+                <span><b>Subject</b> Havasu Falls</span>
+                <span><b>Location</b> Havasupai Reservation, AZ</span>
+                <span><b>Photo</b> Public domain, Wikimedia</span>
+              </figcaption>
+            </figure>
+
+            <div class="site__copy">
+              <p class="site__lead">If the analysis was wrong, a community lost reliable access to clean water.</p>
+
+              <dl class="site__stats">
+                <div><dt>Over allowable stress at the weld joints</dt><dd>35%</dd></div>
+                <div><dt>Lower maximum stress after rehabilitation</dt><dd>42%</dd></div>
+                <div><dt>Years of added service life</dt><dd>~25</dd></div>
+              </dl>
+
+              <p class="site__label">What I did</p>
+              <ul class="site__list">
+                <li>Ran finite element analysis of the tank structure in ANSYS.</li>
+                <li>Found stress concentrations at the weld joints about 35% over allowable limits, which pointed to the specific failure mode behind the water loss.</li>
+                <li>Modeled and validated a rehabilitation design that cut maximum stress by 42% and extended service life by roughly 25 years.</li>
+                <li>Because the failure was pinned down precisely, the fix could be a targeted rehabilitation instead of a full tank replacement.</li>
+              </ul>
+
+              <p class="site__note">Design files and drawings are U.S. government property and aren't shown here.</p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- EDUCATION ----------------------------------------------------- -->
+    <section class="section" id="education">
+      <header class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Education</h2>
+      </header>
+
+      <div class="edu">
+        <div class="edu__copy">
+          <p class="edu__kicker">Alma mater</p>
+          <h3 class="edu__school">Cornell <em>University</em></h3>
+          <dl class="edu__facts">
+            <div><dt>Degree</dt><dd>B.S., Mechanical Engineering</dd></div>
+            <div><dt>College</dt><dd>College of Engineering</dd></div>
+            <div><dt>Where</dt><dd>Ithaca, New York</dd></div>
+            <div><dt>Years</dt><dd>2023 – 2027</dd></div>
+          </dl>
+          <blockquote class="edu__quote">“Far above Cayuga’s waters…”</blockquote>
+        </div>
+
+        <figure class="edu__fig" id="eduFig">
+          <!-- Rotating seal -->
+          <svg class="seal" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path id="sealPath" d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/>
+            </defs>
+            <g class="seal__spin">
+              <text><textPath href="#sealPath" textLength="488">CORNELL UNIVERSITY · ITHACA, NEW YORK · 42°27′N 76°29′W · </textPath></text>
+            </g>
+            <circle cx="100" cy="100" r="58" class="seal__ring"/>
+            <text x="100" y="96" class="seal__big" text-anchor="middle">CU</text>
+            <text x="100" y="118" class="seal__small" text-anchor="middle">EST. 1865</text>
+          </svg>
+
+          <!-- McGraw Tower, south elevation. Every .d stroke draws itself in on scroll. -->
+          <svg class="tower" viewBox="0 0 360 640" role="img" aria-labelledby="towerTitle">
+            <title id="towerTitle">Line drawing of McGraw Tower at Cornell University, with its clock showing the current time in Ithaca</title>
+
+            <line class="tower__cl" x1="180" y1="0" x2="180" y2="632"/>
+
+            <!-- ground -->
+            <line class="d" style="--i:0" pathLength="1" x1="20" y1="600" x2="340" y2="600"/>
+            <path class="d thin" style="--i:1" pathLength="1" d="M40 600 l-10 10 M60 600 l-10 10 M80 600 l-10 10 M100 600 l-10 10 M120 600 l-10 10 M140 600 l-10 10 M160 600 l-10 10 M180 600 l-10 10 M200 600 l-10 10 M220 600 l-10 10 M240 600 l-10 10 M260 600 l-10 10 M280 600 l-10 10 M300 600 l-10 10 M320 600 l-10 10"/>
+
+            <!-- plinth + shaft -->
+            <rect class="d" style="--i:2" pathLength="1" x="130" y="566" width="100" height="34"/>
+            <line class="d" style="--i:3" pathLength="1" x1="126" y1="566" x2="234" y2="566"/>
+            <path class="d" style="--i:4" pathLength="1" d="M140 566 V250 M220 250 V566"/>
+            <path class="d thin" style="--i:5" pathLength="1" d="M140 354 H220 M140 378 H220 M140 402 H220 M140 426 H220 M140 450 H220 M140 474 H220 M140 498 H220 M140 522 H220 M140 546 H220"/>
+            <rect class="d win" style="--i:6" pathLength="1" x="175" y="382" width="10" height="28"/>
+            <rect class="d win" style="--i:6" pathLength="1" x="175" y="454" width="10" height="28"/>
+            <rect class="d win" style="--i:6" pathLength="1" x="175" y="514" width="10" height="28"/>
+
+            <!-- clock stage -->
+            <line class="d" style="--i:7" pathLength="1" x1="136" y1="330" x2="224" y2="330"/>
+            <circle class="d" style="--i:8" pathLength="1" cx="180" cy="290" r="27"/>
+            <circle class="d thin" style="--i:9" pathLength="1" cx="180" cy="290" r="23"/>
+            <g class="tower__ticks">
+              <line x1="180" y1="267" x2="180" y2="272"/>
+              <line x1="180" y1="267" x2="180" y2="270" transform="rotate(30 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="270" transform="rotate(60 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="272" transform="rotate(90 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="270" transform="rotate(120 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="270" transform="rotate(150 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="272" transform="rotate(180 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="270" transform="rotate(210 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="270" transform="rotate(240 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="272" transform="rotate(270 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="270" transform="rotate(300 180 290)"/>
+              <line x1="180" y1="267" x2="180" y2="270" transform="rotate(330 180 290)"/>
+            </g>
+            <g class="tower__hands">
+              <line id="hourHand" x1="180" y1="292" x2="180" y2="277"/>
+              <line id="minuteHand" x1="180" y1="293" x2="180" y2="271"/>
+              <circle cx="180" cy="290" r="1.6"/>
+            </g>
+
+            <!-- belfry -->
+            <rect class="d" style="--i:10" pathLength="1" x="134" y="238" width="92" height="12"/>
+            <path class="d" style="--i:11" pathLength="1" d="M140 238 V160 M220 238 V160"/>
+            <path class="d" style="--i:12" pathLength="1" d="M148 226 V184 A8 8 0 0 1 164 184 V226 Z"/>
+            <path class="d" style="--i:13" pathLength="1" d="M172 226 V184 A8 8 0 0 1 188 184 V226 Z"/>
+            <path class="d" style="--i:14" pathLength="1" d="M196 226 V184 A8 8 0 0 1 212 184 V226 Z"/>
+            <path class="d thin" style="--i:15" pathLength="1" d="M150 196 H162 M150 204 H162 M150 212 H162 M150 220 H162 M174 196 H186 M174 204 H186 M174 212 H186 M174 220 H186 M198 196 H210 M198 204 H210 M198 212 H210 M198 220 H210"/>
+            <rect class="d" style="--i:16" pathLength="1" x="130" y="148" width="100" height="12"/>
+            <path class="d" style="--i:17" pathLength="1" d="M130 148 L134 132 L138 148 M222 148 L226 132 L230 148"/>
+
+            <!-- spire + finial -->
+            <path class="d" style="--i:18" pathLength="1" d="M138 148 L180 34 L222 148"/>
+            <path class="d" style="--i:19" pathLength="1" d="M168 128 L180 108 L192 128 Z M175 128 V118 H185 V128"/>
+            <path class="d" style="--i:20" pathLength="1" d="M180 34 V14"/>
+            <circle class="d" style="--i:20" pathLength="1" cx="180" cy="11" r="3"/>
+
+            <!-- dimension: overall height -->
+            <path class="d thin" style="--i:21" pathLength="1" d="M186 11 H302 M236 600 H302"/>
+            <path class="d" style="--i:22" pathLength="1" d="M292 11 V600 M287 16 l10 -10 M287 605 l10 -10"/>
+            <text class="tower__dim" transform="translate(284 305) rotate(-90)" text-anchor="middle">173′ · 52.7 m</text>
+
+            <!-- callouts -->
+            <path class="d thin" style="--i:23" pathLength="1" d="M150 205 L106 180 H12"/>
+            <text class="tower__note" x="12" y="174">21 CHIME BELLS</text>
+            <path class="d thin" style="--i:24" pathLength="1" d="M154 296 L106 316 H12"/>
+            <text class="tower__note" x="12" y="310">LIVE ITHACA TIME</text>
+            <text class="tower__note tower__time" x="12" y="330" id="ithacaTime">--:--</text>
+            <path class="d thin" style="--i:25" pathLength="1" d="M130 584 L100 560 H12"/>
+            <text class="tower__note" x="12" y="554">COMPLETED 1891</text>
+          </svg>
+
+          <figcaption class="edu__titleblock">
+            <span><b>DWG.</b> 03</span>
+            <span><b>Subject</b> McGraw Tower</span>
+            <span><b>View</b> South elev.</span>
+            <span><b>Scale</b> NTS</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ABOUT --------------------------------------------------------- -->
+    <section class="section" id="about">
+      <header class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title">About</h2>
+      </header>
+      <div class="about">
+        <p class="about__lead">I design and build mechanical systems in service of public health.</p>
+        <figure class="about__fig">
+          <img src="assets/photos/mole-lake-clinic.jpg" width="1113" height="584" loading="lazy" decoding="async"
+               alt="Construction-site sign for the Sokaogon Chippewa Community health clinic expansion and new flex facility and museum, coming fall 2026">
+          <figcaption class="edu__titleblock cad__titleblock">
+            <span><b>Fig.</b> 03</span>
+            <span><b>Subject</b> Clinic expansion</span>
+            <span><b>Location</b> Mole Lake, WI</span>
+            <span><b>Image</b> WJFW</span>
+          </figcaption>
+        </figure>
+        <div class="about__body">
+          <p>As a Mechanical Engineering Intern with the Indian Health Service through the U.S. Public Health Service, I support water, sanitation and health care infrastructure for tribal communities in the Southwest and Wisconsin. My work combines fieldwork and design. In the field, I’ve collected pressure logs, run flow tests, and done structural inspections at more than 20 sites, and back in the office I’ve used that data to design and model over 15 infrastructure systems in AutoCAD and Civil 3D. Those design packages helped secure $500,000 in federal funding, so getting the details right mattered. One of my main projects was the rehabilitation of a 50,000-gallon water tower on the Havasupai Reservation, where I used ANSYS to find overstressed weld joints and helped develop a targeted repair that extended the tank’s service life by about 25 years.</p>
+          <p>This summer I also worked on the $21 million expansion of the Sokaogon Chippewa Community’s health clinic in Mole Lake, Wisconsin, which triples the clinic to more than 30,000 square feet. I reviewed contractor bid proposals and interviewed candidates for the construction contract, planned emergency routes and the placement of exit signs, evacuation maps and fire extinguishers, and laid out furniture across the new space. What I value most about this work is how direct the impact is. The systems I help design decide whether families have reliable access to clean water and health care.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACT --------------------------------------------------------- -->
+  <footer class="section footer" id="contact">
+    <header class="section__head">
+      <span class="section__index">04</span>
+      <h2 class="section__title">Contact</h2>
+    </header>
+    <a class="footer__mail" href="mailto:jb2726@cornell.edu">jb2726@cornell.edu</a>
+    <ul class="footer__links">
+      <li><a href="https://www.linkedin.com/in/jasonbak/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="assets/jason-bak-resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+    </ul>
+    <p class="footer__fine">© 2026 Jason Bak</p>
+  </footer>
+
+  <script src="script.js?v=9"></script>
+  <script type="module" src="r262.js?v=9"></script>
+</body>
+</html>
